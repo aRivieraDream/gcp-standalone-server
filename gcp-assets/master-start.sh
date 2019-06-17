@@ -1,7 +1,7 @@
 #!/bin/bash
 printf '\n\n-----Starting Tableau Server Scripted Install------\n'
-#gcloud deployment-manager deployments create tableau-standalone-server --config standalone-tableau-server.yaml
-#wait
+gcloud deployment-manager deployments create tableau-standalone-server --config standalone-tableau-server.yaml
+wait
 printf '\n\n-----------\nThe VM has finished deploying but Tableau Server is still being installed ...\n'
 IP=`gcloud compute instances describe tableau-server --zone=us-west1-a | grep natIP | awk '/natIP:/{print $NF}'`
 SECRETS="https://console.cloud.google.com/storage/browser/tslinux-silent-install/static-assets"
