@@ -19,7 +19,7 @@ sudo usermod -aG sudo $tsm_admin_user
 sudo chmod +x automated-installer
 
 # Run the installer as dummy user (-a flag)
-sudo ./automated-installer -s secrets -f config.json -r reg_templ.json --accepteula -a $tsm_admin_user tableau-server-2019-1-1_amd64.deb
+sudo ./automated-installer-2019-3-beta_all.deb -s secrets -f config.json -r reg_templ.json --accepteula -a $tsm_admin_user tableau-server-2019-3-beta_amd64.deb
 
 # cleanup files used for install
 cd ..
