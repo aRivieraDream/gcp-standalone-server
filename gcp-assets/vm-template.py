@@ -5,7 +5,6 @@ This template utilizes options selected in compute-engine-template.py
 """
 # TODO:
 # update image type to images/ubuntu-1604-xenial-v20181030
-# figure out if 64 gigs of ram is really needed vs just the default 60
 # double check scopes required
 
 
@@ -26,7 +25,7 @@ def GenerateConfig(context):
                                   '/machineTypes/', context.properties['machineType']]),
           'minCpuPlatform': context.properties['minCpuPlatform'],
           'disks': [{
-              'deviceName': 'boot', #why is this boot?
+              'deviceName': 'boot',
               'type': 'PERSISTENT',
               'boot': True,
               'autoDelete': True,
